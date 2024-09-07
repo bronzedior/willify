@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Willify</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet" />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="#home" class="navbar-logo"><img src="assets/img/Willify.png" alt="Willify" /></a>
+
+            <div class="navbar-menu">
+                <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+            </div>
+
+            <div class="navbar-nav">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#songs">Songs</a>
+                <a href="#login" id="show-login">Login</a>
+            </div>
+
+        </nav>
+    </header>
+
+    <div class="popup">
+        <div class="close-btn"><i data-feather="x-circle" class="feather-40px"></i></div>
+
+        <div class="form">
+            <h2>Login</h2>
+
+            <form method="GET" onsubmit="return validateForm()">
+                <div class="form-element">
+                    <div class="input-box">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" required>
+                        <p id="error-username" class="error"></p>
+                    </div>
+                    <div class="input-box">
+                        <label for="email">Email</label>
+                        <input type="text" id="email" required>
+                        <p id="error-email" class="error"></p>
+                    </div>
+                    <div class="input-box">
+                        <label for="password">Password</label>
+                        <input type="text" id="password" required>
+                        <p id="error-password" class="error"></p>
+                    </div>
+                    <div class="input-box">
+                        <label for="dob">DOB</label>
+                        <input type="date" id="dob" required>
+                        <p id="error-dob" class="error"></p>
+                    </div>
+                    <div class="input-box">
+                        <label>Gender</label>
+                        <input type="radio" id="gender-man" name="gender" value="man" required>
+                        <label for="gender-man">Man</label>
+                        <input type="radio" id="gender-woman" name="gender" value="woman" required>
+                        <label for="gender-woman">Woman</label>
+                        <p id="error-gender" class="error"></p>
+                    </div>
+                    <button type="submit">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="home" id="home">
+        <div class="content">
+            <h1>Listen to the beat of your life</h1>
+            <h1>Boost your mood to start your day</h1>
+        </div>
+    </div>
+
+    <div class="best">
+        <h2>Best Seller</h2>
+        <p>Top music from artist Sabrina Carpenter, Djo, Ariana Grande, SZA, Benson Boone, Harry Styles, 24kGoldn,
+            Justin
+            Bieber.
+        </p>
+
+        <div class="row">
+            <div class="song-card">
+                <img src="assets/songs/Espresso.png" alt="Best Seller 1" class="song-card-img best-active-image1">
+            </div>
+            <div class="song-card">
+                <img src="assets/songs/End_of_Beginning.png" alt="Best Seller 2"
+                    class="song-card-img best-active-image2">
+            </div>
+            <div class="song-card">
+                <img src="assets/songs/We_Can't_Be_Friends.png" alt="Best Seller 3"
+                    class="song-card-img best-active-image3">
+            </div>
+            <div class="song-card">
+                <img src="assets/songs/Saturn.png" alt="Best Seller 4" class="song-card-img best-active-image4">
+            </div>
+            <div class="song-card">
+                <img src="assets/songs/Beautiful_Things.png" alt="Best Seller 5"
+                    class="song-card-img best-active-image5">
+            </div>
+        </div>
+        <div class="slider">
+            <button onclick="changeBestSellerImage(-1)" class="prev-button"><i class="feather-40px"
+                    data-feather="arrow-left-circle"></i></button>
+            <button onclick="changeBestSellerImage(+1)" class="next-button"><i class="feather-40px"
+                    data-feather="arrow-right-circle"></i></button>
+        </div>
+    </div>
+
+    <div class="recommendation">
+        <h2>Our Picks for You</h2>
+        <p>Recommendation songs from The Weeknd, 21 Savage, Sabrina Carpenter, Bring Me The Horizon, Marshmello, S1mba,
+            Chase Atlantic.
+        </p>
+
+        <div class="row">
+            <div class="song-card">
+                <img src="assets/songs/One_of_The_Girls.png" alt="Recommendation 1"
+                    class="song-card-img recommendation-active-image1">
+            </div>
+            <div class="song-card">
+                <img src="assets/songs/redrum.png" alt="Recommendation 2"
+                    class="song-card-img recommendation-active-image2">
+            </div>
+            <div class="song-card">
+                <img src="assets/songs/Nonsense.png" alt="Recommendation 3"
+                    class="song-card-img recommendation-active-image3">
+            </div>
+            <div class="song-card">
+                <img src="assets/songs/Kingslayer.png" alt="Recommendation 4"
+                    class="song-card-img recommendation-active-image4">
+            </div>
+            <div class="song-card">
+                <img src="assets/songs/Silence.png" alt="Recommendation 5"
+                    class="song-card-img recommendation-active-image5">
+            </div>
+        </div>
+
+        <div class="slider">
+            <button onclick="changeRecommendationImage(-1)" class="prev-button"><i class="feather-40px"
+                    data-feather="arrow-left-circle"></i></button>
+            <button onclick="changeRecommendationImage(+1)" class="next-button"><i class="feather-40px"
+                    data-feather="arrow-right-circle"></i></button>
+        </div>
+    </div>
+
+    <div class="about" id="about">
+        <h2>About Us</h2>
+        <p>Willify is a web-based music streaming platform <br>
+            providing the best quality music listening experience.</p>
+        <p>Established in 24th January 2005, <br>Zedior Donny believe
+            that music can bring people together and enrich lives. <br>
+            He decided to provide a seamless and personalized <br>
+            music streaming experience to every listener,
+            no matter where they are or what they love.</p>
+        <p>Become part of Willify family and start your musical journey</p>
+    </div>
+
+    <div class="songs" id="songs">
+        <h2>See Our Collection</h2>
+        <p>Get to know more with out artist 50 Cent, Harry Styles, Paramore, Chase Atlantic and many more.
+        </p>
+
+        <div class="row">
+            <div class="song-card">
+                <img src="assets/songs/Espresso.png" alt="Collection 1" class="song-card-img best-active-image1">
+            </div>
+            <div class="song-card">
+                <img src="assets/songs/End_of_Beginning.png" alt="Collection 2"
+                    class="song-card-img best-active-image2">
+            </div>
+            <div class="song-card">
+                <img src="assets/songs/We_Can't_Be_Friends.png" alt="Collection 3"
+                    class="song-card-img best-active-image3">
+            </div>
+            <div class="song-card">
+                <img src="assets/songs/Saturn.png" alt="Collection 4" class="song-card-img best-active-image4">
+            </div>
+            <div class="song-card">
+                <img src="assets/songs/Beautiful_Things.png" alt="Collection 5"
+                    class="song-card-img best-active-image5">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="song-card">
+                <img src="assets/songs/One_of_The_Girls.png" alt="Collection 6"
+                    class="song-card-img recommendation-active-image1">
+            </div>
+            <div class="song-card">
+                <img src="assets/songs/redrum.png" alt="Collection 7"
+                    class="song-card-img recommendation-active-image2">
+            </div>
+            <div class="song-card">
+                <img src="assets/songs/Nonsense.png" alt="Collection 8"
+                    class="song-card-img recommendation-active-image3">
+            </div>
+            <div class="song-card">
+                <img src="assets/songs/Kingslayer.png" alt="Collection 9"
+                    class="song-card-img recommendation-active-image4">
+            </div>
+            <div class="song-card">
+                <img src="assets/songs/Silence.png" alt="Collection 10"
+                    class="song-card-img recommendation-active-image5">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="song-card">
+                <img src="assets/songs/Mood.png" alt="Collection 11" class="song-card-img recommendation-active-image1">
+            </div>
+            <div class="song-card">
+                <img src="assets/songs/Ghost.png" alt="Collection 12"
+                    class="song-card-img recommendation-active-image2">
+            </div>
+            <div class="song-card">
+                <img src="assets/songs/As_It_Was.png" alt="Collection 13"
+                    class="song-card-img recommendation-active-image3">
+            </div>
+            <div class="song-card">
+                <img src="assets/songs/Sunroof.png" alt="Collection 14"
+                    class="song-card-img recommendation-active-image4">
+            </div>
+            <div class="song-card">
+                <img src="assets/songs/Still_Into_You.png" alt="Collection 15"
+                    class="song-card-img recommendation-active-image5">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="song-card">
+                <img src="assets/songs/Rover.png" alt="Collection 16"
+                    class="song-card-img recommendation-active-image1">
+            </div>
+            <div class="song-card">
+                <img src="assets/songs/Moth_To_a_Flame.png" alt="Collection 17"
+                    class="song-card-img recommendation-active-image2">
+            </div>
+            <div class="song-card">
+                <img src="assets/songs/Starboy.png" alt="Collection 18"
+                    class="song-card-img recommendation-active-image3">
+            </div>
+            <div class="song-card">
+                <img src="assets/songs/Baby_By_Me.png" alt="Collection 19"
+                    class="song-card-img recommendation-active-image4">
+            </div>
+            <div class="song-card">
+                <img src="assets/songs/Swim.png" alt="Collection 20" class="song-card-img recommendation-active-image5">
+            </div>
+        </div>
+    </div>
+
+    <div class="lyrics">
+        <h2>Hit The Lyrics</h2>
+        <br>
+        <br>
+        <h3 id="lyrics-title">I Wish You Were Sober</h3>
+        <h3 id="lyrics-artist">Conan Gray</h3>
+        <div class="row">
+            <div class="lyrics-img">
+                <img src="assets/lyrics/Wish_You_Were_Sober.png" alt="Lyrics" class="lyrics-active-image">
+            </div>
+            <div class="content" id="lyrics-content">
+                <p>Nineteen, but you act twenty-five now <br>
+                    Knees weak, but you talk pretty fly, wow <br>
+                    Ripped jeans and a cup that you just downed <br>
+                    Take me where the music ain't too loud <br>
+                    Trade drinks, but you don't even know her <br>
+                    Save me 'til the party is over <br>
+                    Kiss me in the seat of your Rover <br>
+                    Real sweet, but I wish you were sober</p>
+            </div>
+        </div>
+        <div class="slider">
+            <button onclick="changeLyrics(-1)" class="prev-button"><i class="feather-40px"
+                    data-feather="arrow-left-circle"></i></button>
+            <audio id="lyrics-audio" controls>
+                <source src="assets/lyrics/Wish_You_Were_Sober.mp3" id="audio-source" type="audio/mpeg">
+            </audio>
+            <button onclick="changeLyrics(+1)" class="next-button"><i class="feather-40px"
+                    data-feather="arrow-right-circle"></i></button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="row">
+            <div class="ownership">
+                <h3>This page belongs to <a href="">zediordonny</a>. &copy; 2024.</h3>
+            </div>
+
+            <div class="socials">
+                <a href="https://www.instagram.com/zediordonny/" target="_blank"><i data-feather="instagram"></i></a>
+                <a href="https://www.linkedin.com/in/zediordonny/" target="_blank"><i data-feather="linkedin"></i></a>
+                <a href="https://x.com/ZediorDonny" target="_blank"><i data-feather="twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        feather.replace()
+    </script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
